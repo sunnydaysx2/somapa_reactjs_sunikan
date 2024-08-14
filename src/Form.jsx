@@ -165,13 +165,13 @@ export default function Form({ addData, editData, onCancel }) {
         <div className="flex mt-5 mb-10 place-items-center gap-5">
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg w-[100px]"
+            className="bg-blue-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg w-[100px]"
           >
             {editData ? "Edit" : "Add"}
           </button>
           <button
             type="button"
-            className="bg-white px-4 py-2 rounded-lg w-[100px]"
+            className="bg-white hover:bg-gray-400 px-4 py-2 rounded-lg w-[100px]"
             onClick={() => {
               setFormData({
                 firstname: "",

@@ -34,7 +34,8 @@ const handleCancel = () => {
   return (
     <div className="p-6">
        <Form addData={handleAdd} editData={editData} onCancel={handleCancel} />
-      <table className="min-w-full bg-white border border-gray-300">
+       <div className='overflow-x-auto'>
+      <table className="min-w-full bg-white border border-gray-300 ">
         <thead className="bg-indigo-400 text-white">
           <tr className="border-b border-gray-300 font-normal">
             <th className="py-2 px-4 text-center border-r border-gray-300">No.</th>
@@ -50,7 +51,7 @@ const handleCancel = () => {
             <tr key={item.id} className="border-b border-gray-200 odd:bg-white even:bg-blue-100">
               <td className="py-2 px-4 border-r border-gray-300 text-center w-[100px]">{item.id}</td>
               <td className="py-2 px-4 border-r border-gray-300 text-center w-[80px]">
-                <button onClick={() => handleEdit(item)}>
+                <button onClick={() => handleEdit(item)} className='shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-1 rounded-sm'>
                   <MdEdit size={20} />
                 </button>
               </td>
@@ -77,6 +78,7 @@ const handleCancel = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
